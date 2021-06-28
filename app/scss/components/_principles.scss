@@ -1,0 +1,164 @@
+.principles {
+    background-color: $lite-black;
+    padding: 170px 0 60px;
+    margin-bottom: 80px;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content {
+        max-width: 600px;
+        width: 100%;
+    }
+    &__title {
+        margin-bottom: 80px;
+    }
+    &__list {
+        margin-bottom: 40px;
+    }
+    &__item {
+        position: relative;
+        padding-left: 100px;
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @include bg;
+        }
+    }
+    &__item--quality {
+        &::after {
+            width: 53px;
+            height: 70px;
+            background-image: url(../images/quality.svg);
+        }
+    }
+    &__item--profi {
+        &::after {
+            width: 64px;
+            height: 57px;
+            background-image: url(../images/profi.svg);
+        }
+    }
+    &__item--reliability {
+        &::after {
+            width: 64px;
+            height: 65px;
+            background-image: url(../images/reliability.svg);
+        }
+    }
+    &__subtitle {
+        font-size: 23px;
+        margin-bottom: 15px;
+        font-weight: $fw700;
+        font-family: $Circe;
+        line-height: 1;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__row {
+        margin-bottom: 4px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+
+}
+
+
+.principles-slider {
+    max-width: 730px;
+    width: 100%;
+    &__item {
+        @include bg;
+        display: block;
+        height:  795px;
+    }
+    & .slick-dots {
+        position: absolute;
+        width: 285px;
+        padding: 20px 0 20px 40px;
+        display: flex;
+        right: -35px;
+        bottom: 125px;
+        z-index: 9;
+        background-color: #202020;
+        li {
+            height: 30px;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            button {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                font-size: 0;
+                padding: 0;
+                border: none;
+                outline: transparent;
+                background-color: #fff;
+                transition: background-color 0.3s ease-in;
+                &:hover {
+                    background-color: rgba(#fff, 0.6);
+                }
+                &:focus {
+                    background-color: #ccc;
+                }
+                &:active {
+                    background-color: $gold;
+                }
+            }    
+            &.slick-active button{
+                background-color: $gold;
+            }
+        }
+    }
+    & .slick-arrow {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background-color: $gold;
+        border: 1px solid transparent;
+        display: flex;
+        position: absolute;
+        z-index: 15;
+        outline: transparent;
+        bottom: 140px;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+        &:hover {
+            background-color: rgba($gold, 0.7);
+        }
+        &:focus {
+            border-color: #fff;
+        }
+        &:active {
+            background-color: #202020;
+        }
+        &.slick-disabled {
+            background-color: #202020;
+            border-color: $gold;
+            & .principles-slider__icon {
+                fill: $gold;
+            }
+        }
+    }
+    &__icon {
+        width: 13px;
+        height: 13px;
+        fill: #fff;
+        margin: auto;
+    }
+    & .slick-prev {
+        right: 50px;
+    }
+    & .slick-next {
+        right: 0;
+    }
+}

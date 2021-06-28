@@ -1,15 +1,557 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>www</title>
+    <title>СК инфраструктура</title>
+    <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <p>
-        gggg
-        
-    </p>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="header__btn" type="button" aria-label="Выпадающее меню">
+                <span class="header__btn-item"></span>
+                <span class="header__btn-item"></span>
+                <span class="header__btn-item"></span>
+
+            </button>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Проекты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Вакансии</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Политика конфиденциальности</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a class="logo header__logo" href="#">
+                <img class="logo__images" src="images/logo.png" alt="logo">
+            </a>
+            <a class="header__link" href="tel:+78124016495">
+                <mark class="header__link--gold">+7 (812)</mark>
+                401-64-95
+            </a>
+            <a class="header__callback" href="#">
+                <svg class="header__phone">
+                    <use xlink:href="images/sprite.svg#tel"></use>
+                </svg>
+                <span class="visually-hidden">
+                    значок телефона, нажав на который вы можете заказать обратный звонок
+                </span>
+                Обратный звонок
+            </a>
+
+
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <section class="home-page">
+    <h1 class="visually-hidden">
+        Строительная компания CК инфраструктура
+    </h1>
+    <div class="home-page__slider">
+        <div class="home-page__slide" style="background-image: url(images/home-page-bg.jpg);">
+            <div class="container">
+                <div class="home-page__wrapper">
+                    <div class="home-page__inner">
+                        <ul class="home-page__list">
+                            <li class="home-page__item home-page__item--water">Монтаж сетей водоснабжения</li>
+                            <li class="home-page__item home-page__item--sewerage ">Водоотведение и канализация </li>
+                            <li class="home-page__item home-page__item--network">Наружные тепловые сети и тепловые пункты</li>
+                            <li class="home-page__item home-page__item--ssc">Монтаж Ж/Б конструкций</li>
+                            <li class="home-page__item home-page__item--territory">Благоустройство территории</li>
+                        </ul>
+                        <div class="home-page__subtitle">Полный комплекс работ:</div>
+                        <ul class="home-page__items">
+                            <li class="home-page__row">проектирование</li>
+                            <li class="home-page__row">согласование</li>
+                            <li class="home-page__row">строительно-монтажные работы</li>
+                            <li class="home-page__row">пусконаладочные работы</li>
+                            <li class="home-page__row">сервисное обслуживание</li>
+                        </ul>
+                    </div>
+                    <div class="home-page__logo-bg" style="background-image: url(images/logo-big.svg);" aria-label="Картинка логотип нашей компании"></div>
+                </div>
+            </div>
+        </div>
+        <div class="home-page__slide" style="background-image: url(images/home-page-bg.jpg);">
+            <div class="container">
+                <div class="home-page__wrapper">
+                    <div class="home-page__inner">
+                        <ul class="home-page__list">
+                            <li class="home-page__item home-page__item--water">Монтаж сетей водоснабжения</li>
+                            <li class="home-page__item home-page__item--sewerage ">Водоотведение и канализация </li>
+                            <li class="home-page__item home-page__item--network">Наружные тепловые сети и тепловые пункты</li>
+                            <li class="home-page__item home-page__item--ssc">Монтаж Ж/Б конструкций</li>
+                            <li class="home-page__item home-page__item--territory">Благоустройство территории</li>
+                        </ul>
+                        <div class="home-page__subtitle">Полный комплекс работ:</div>
+                        <ul class="home-page__items">
+                            <li class="home-page__row">проектирование</li>
+                            <li class="home-page__row">согласование</li>
+                            <li class="home-page__row">строительно-монтажные работы</li>
+                            <li class="home-page__row">пусконаладочные работы</li>
+                            <li class="home-page__row">сервисное обслуживание</li>
+                        </ul>
+                    </div>
+                    <div class="home-page__logo-bg" style="background-image: url(images/logo-big.svg);" aria-label="Картинка логотип нашей компании"></div>
+                </div>
+            </div>
+        </div>
+        <div class="home-page__slide" style="background-image: url(images/home-page-bg.jpg);">
+            <div class="container">
+                <div class="home-page__wrapper">
+                    <div class="home-page__inner">
+                        <ul class="home-page__list">
+                            <li class="home-page__item home-page__item--water">Монтаж сетей водоснабжения</li>
+                            <li class="home-page__item home-page__item--sewerage ">Водоотведение и канализация </li>
+                            <li class="home-page__item home-page__item--network">Наружные тепловые сети и тепловые пункты</li>
+                            <li class="home-page__item home-page__item--ssc">Монтаж Ж/Б конструкций</li>
+                            <li class="home-page__item home-page__item--territory">Благоустройство территории</li>
+                        </ul>
+                        <div class="home-page__subtitle">Полный комплекс работ:</div>
+                        <ul class="home-page__items">
+                            <li class="home-page__row">проектирование</li>
+                            <li class="home-page__row">согласование</li>
+                            <li class="home-page__row">строительно-монтажные работы</li>
+                            <li class="home-page__row">пусконаладочные работы</li>
+                            <li class="home-page__row">сервисное обслуживание</li>
+                        </ul>
+                    </div>
+                    <div class="home-page__logo-bg" style="background-image: url(images/logo-big.svg);" aria-label="Картинка логотип нашей компании"></div>
+                </div>
+            </div>
+        </div>
+        <div class="home-page__slide" style="background-image: url(images/home-page-bg.jpg);">
+            <div class="container">
+                <div class="home-page__wrapper">
+                    <div class="home-page__inner">
+                        <ul class="home-page__list">
+                            <li class="home-page__item home-page__item--water">Монтаж сетей водоснабжения</li>
+                            <li class="home-page__item home-page__item--sewerage ">Водоотведение и канализация </li>
+                            <li class="home-page__item home-page__item--network">Наружные тепловые сети и тепловые пункты</li>
+                            <li class="home-page__item home-page__item--ssc">Монтаж Ж/Б конструкций</li>
+                            <li class="home-page__item home-page__item--territory">Благоустройство территории</li>
+                        </ul>
+                        <div class="home-page__subtitle">Полный комплекс работ:</div>
+                        <ul class="home-page__items">
+                            <li class="home-page__row">проектирование</li>
+                            <li class="home-page__row">согласование</li>
+                            <li class="home-page__row">строительно-монтажные работы</li>
+                            <li class="home-page__row">пусконаладочные работы</li>
+                            <li class="home-page__row">сервисное обслуживание</li>
+                        </ul>
+                    </div>
+                    <div class="home-page__logo-bg" style="background-image: url(images/logo-big.svg);" aria-label="Картинка логотип нашей компании"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="principles">
+    <div class="container">
+        <div class="principles__inner">
+            <div class="principles__content">
+                <h2 class="title principles__title">Наши принципы</h2>
+                <ul class="principles__list">
+                    <li class="principles__item principles__item--quality">
+                        <h3 class="principles__subtitle">Качество</h3>
+                        <ul class="principles__items">
+                            <li class="principles__row">
+                                - используем лучшие материалы и комплектующие
+                            </li>
+                            <li class="principles__row">
+                                - обладаем собственным парком техники
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="principles__item principles__item--profi">
+                        <h3 class="principles__subtitle">Профессионализм, эффективность, развитие</h3>
+                        <ul class="principles__items">
+                            <li class="principles__row">
+                                - Работаем с 2015 года
+                            </li>
+                            <li class="principles__row">
+                                - ТОПовые специалисты
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="principles__item principles__item--reliability">
+                        <h3 class="principles__subtitle">Предсказуемость и надежность</h3>
+                        <ul class="principles__items">
+                            <li class="principles__row">
+                                - Нацеленность на результат
+                            </li>
+                            <li class="principles__row">
+                                - Партнерские отношения
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="link principles__link" href="#">Подробнее о компании</a>
+            </div>
+
+            <ul class="principles-slider">
+                <li class="principles-slider__item" aria-label="Колесные экскаваторы JCB" style="background-image: url(images/principles-slider-bg.png);"></li>
+                <li class="principles-slider__item" aria-label="Колесные экскаваторы JCB" style="background-image: url(images/principles-slider-bg.png);"></li>
+                <li class="principles-slider__item" aria-label="Колесные экскаваторы JCB" style="background-image: url(images/principles-slider-bg.png);"></li>
+            </ul>
+
+        </div>
+    </div> 
+</section>
+
+
+
+
+
+        <section class="projects">
+    <div class="container">
+        <h2 class="title projects__title">Проекты</h2>
+        <ul class="projects__list">
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-1">
+                    <img class="projects__images" src="images/projects-1.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-1.png" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--gold" aria-label="Состояние проекта. Проект не закончен"></div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-2">
+                    <img class="projects__images" src="images/projects-2.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-2.png" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--green" aria-label="Состояние проекта. Проект закончен">Завершен</div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-3">
+                    <img class="projects__images" src="images/projects-3.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-3.svg" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--gold" aria-label="Состояние проекта. Проект не закончен"></div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-4">
+                    <img class="projects__images" src="images/projects-4.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-2.png" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--green" aria-label="Состояние проекта. Проект закончен">Завершен</div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-5">
+                    <img class="projects__images" src="images/projects-1.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-1.png" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--gold" aria-label="Состояние проекта. Проект не закончен"></div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-6">
+                    <img class="projects__images" src="images/projects-6.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-3.svg" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--gold" aria-label="Состояние проекта. Проект не закончен"></div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-7">
+                    <img class="projects__images" src="images/projects-1.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-1.png" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--gold" aria-label="Состояние проекта. Проект не закончен"></div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-8">
+                    <img class="projects__images" src="images/projects-2.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-2.png" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--green" aria-label="Состояние проекта. Проект закончен">Завершен</div>
+                </a>
+            </li>
+            <li class="projects__item">
+                <a class="projects__link" data-fancybox href="#modal-project-9">
+                    <img class="projects__images" src="images/projects-3.jpg" alt="Картинка ремонтных работ">
+                    <div class="projects__holder">
+                        <div class="projects__photo">
+                            <img class="projects__images-logo" src="images/projects-logo-3.svg" alt="Картинка логотип компании">
+                        </div>
+                        <div class="projects__info">
+                            <span class="projects__name"> Работы по монтажу прифундаментного дренажа</span>
+                            <br class="projects__address">
+                                по адресу: </br> ЛО, Всеволожский р-н, «Ручьи»
+                            </address>
+                        </div>
+                    </div>
+                    <div class="projects__status projects__status--green" aria-label="Состояние проекта. Проект закончен">Завершен</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+    </main>
+
+
+        <ul class="modal-project" id="modal-project-1">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-2">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-3">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-4">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-5">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-6">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-7">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-8">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+    <ul class="modal-project" id="modal-project-9">
+        <li class="modal-project__item">
+            <span class="modal-project__title">Заказчик:</span>
+            <p class="modal-project__description">ООО Главстрой СПБ</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Адрес объекта:</span>
+            <p class="modal-project__description">Район Юнтолово Квартал 1 этап 2 корпуса 1,2,3,4</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Наименование работ:</span>
+            <p class="modal-project__description">Устройство прифундаментного дренажа</p>
+        </li>
+        <li class="modal-project__item">
+            <span class="modal-project__title">Объем выполненных работ:</span>
+            <p class="modal-project__description">582 м.п.</p>
+        </li>
+    </ul>
+
+
+
+
+    <script src="js/main.min.js"></script>
 </body>
 </html>
