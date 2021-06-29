@@ -1,0 +1,154 @@
+.services {
+    &__title {
+        margin-bottom: 70px;
+    }
+}
+
+.services-cars {
+    padding: 70px 0 80px;
+    background-color: #232323;
+    &__subtitle {
+        margin-bottom: 90px;
+    }
+    &__inner {
+        display: flex;
+        // justify-content: space-between;
+        column-gap: 1.5%;
+    }
+    &__column {
+        max-width: 467px;
+        width: 100%;
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        transition: background-color 0.3s ease-in;
+        &--kamaz {
+            height: 35%;
+        }
+        &--loader {
+            height: 63%;
+        }
+        &--backhoe,
+        &--kamaz2 {
+            height: 49%;
+            background-color: #363636;
+        }
+        &--kamaz3,
+        &--rink,
+        &--loader2 {
+            height: 32%;
+            justify-content: flex-end;
+        }
+        &--loader,
+        &--kamaz3 {
+            background-color: #313131;
+        }
+        &--loader2,
+        &--kamaz,
+        &--rink {
+            background-color: #141414;
+        }
+        &:hover {
+            background-color: $gold;
+        }
+    }
+    &__info {
+        position: absolute;
+        left: 40px;
+        top: 40px;
+    }
+    &__name {
+        display: block;
+        font-weight: $fw700;
+        font-size: 20px;
+    }
+    &__name,
+    &__model {
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+}
+
+
+.services-duties {
+    padding: 70px 0 30px;
+    background-color: #141414;
+    &__subtitle {
+        margin-bottom: 90px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 28%;
+        width: 100%;
+        margin-bottom: 80px;
+        position: relative;
+        padding-left: 115px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @include bg;
+        }
+        &--documentation {
+            &::after {
+                width: 64px;
+                height: 64px;
+                background-image: url(../images/icons/documentation.svg);
+            }
+        }
+        &--design {
+            &::after {
+                width: 70px;
+                height: 66px;
+                background-image: url(../images/icons/design.svg);
+            }
+        }
+        &--harmonization {
+            &::after {
+                width: 60px;
+                height: 60px;
+                background-image: url(../images/icons/harmonization.svg);
+            }
+        }
+        &--service {
+            &::after {
+                width: 60px;
+                height: 70px;
+                background-image: url(../images/icons/service.svg);
+            }
+        }
+        &--works {
+            &::after {
+                width: 74px;
+                height: 65px;
+                background-image: url(../images/icons/works.svg);
+            }
+        }
+        &--mounting {
+            &::after {
+                width: 70px;
+                height: 63px;
+                background-image: url(../images/icons/mounting.svg);
+            }
+        }
+    }
+    &__text {
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+}
