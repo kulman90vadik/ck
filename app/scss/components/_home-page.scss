@@ -1,0 +1,133 @@
+.home-page {
+    &__slide {
+        height: 100vh;
+        @include bg;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    &__inner {
+        max-width: 800px;
+        width: 100%;
+    }
+    &__logo-bg {
+        width: 394px;
+        height: 518px;
+        @include bg;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    &__item {
+        position: relative;
+        display: block;
+        padding-left: 86px;
+        max-width: 230px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        @include lineClamp;
+        -webkit-line-clamp: 3;
+        &--water {
+            &::after {
+                width: 63px;
+                height: 54px;
+                background-image: url(../images/icons/water.svg);
+            }
+        }
+        &--sewerage {
+            &::after {
+                width: 52px;
+                height: 58px;
+                background-image: url(../images/icons/sewerage.svg);
+            }
+        }
+        &--network {
+            &::after {
+                width: 50px;
+                height: 59px;
+                background-image: url(../images/icons/network.svg);
+            }
+        }
+        &--ssc {
+            &::after {
+                width: 70px;
+                height: 70px;
+                background-image: url(../images/icons/ssc.svg);
+            }
+        }
+        &--territory {
+            &::after {
+                width: 54px;
+                height: 55px;
+                background-image: url(../images/icons/territory.svg);
+            }
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            content: '';
+            @include bg;
+        }
+    }
+    &__subtitle {
+        font-size: 24px;
+        line-height: 1.1;
+        font-weight: $fw700;
+        margin-bottom: 23px;
+    }
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        font-size: 19px;
+        position: relative;
+        padding-left: 20px;
+        &::after {
+            position: absolute;
+            content: '-';
+            left: 0;
+        }
+    }
+    & .slick-dots {
+        position: absolute;
+        right: 100px;
+        z-index: 9;
+        top: 50%;
+        transform: translateY(-50%);
+        li {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            button {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                font-size: 0;
+                padding: 0;
+                border: none;
+                outline: transparent;
+                background-color: #fff;
+                transition: background-color 0.3s ease-in;
+                &:hover {
+                    background-color: rgba(#fff, 0.6);
+                }
+                &:focus {
+                    background-color: #ccc;
+                }
+                &:active {
+                    background-color: $gold;
+                }
+            }    
+            &.slick-active button{
+                background-color: $gold;
+            }
+        }
+    }
+}

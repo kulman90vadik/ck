@@ -1,54 +1,86 @@
-// .visually-hidden {
-// 	position: absolute !important;
-// 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-// 	clip: rect(1px, 1px, 1px, 1px);
-// 	padding:0 !important;
-// 	border:0 !important;
-// 	height: 1px !important; 
-// 	width: 1px !important; 
-// 	overflow: hidden;
-// }
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
 
-// html,
-// body {
-//     height: 100%;
-// }
+html,
+body {
+    height: 100%;
+}
 
-// .main {
-//     flex-grow: 1;
-// }
+.main {
+    flex-grow: 1;
+}
 
-// body {
-//     // font-family: $Rubik;
-//     // font-weight: $fw400;
-//     font-size: 16px;
-//     background-color: #fff;
-//     // color: $global;
-//     display: flex;
-//     flex-direction: column;
-//     counter-reset: m-counter;
-//     @include max($lg) {
-//         // line-height: 1.5;
-//         // font-size: 16px;
-//     }
-// }
+body {
+    font-family: $DmSans;
+    font-weight: $fw400;
+    font-size: 18px;
+    background-color: $bg;
+    line-height: 1.3;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    @include max($lg) {
+        line-height: 1.5;
+        font-size: 16px;
+    }
+}
 
-// .container {
-//     max-width: 1200px;
-//     padding: 0 15px;
-//     margin: 0 auto;
-//     &--fluid {
-//         max-width: 1800px;
-//     }
-//     @include max($s) {
-//         padding: 0 10px;
-//     }
-// }
+.container {
+    max-width: 1460px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+.title {
+    font-size: 50px;
+    font-weight: $fw700;
+    line-height: 1.1;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 35px;
+    font-weight: $fw500;
+    line-height: 1.2;
+}
+
+
+.link {
+    display: inline-block;
+    padding: 11px 34px;
+    border: 1px solid $gold;
+    font-family: $Circe;
+    color: $gold;
+    outline: transparent;
+    transition: color 0.3s ease-in, border-color 0.3s ease-in;
+    &:hover {
+        border-color: $grey;
+        color: $grey;
+    }
+    &:focus {
+        border-color: #fff;
+        color: #fff;
+    }
+    &:active {
+        border-color: rgb(128, 64, 64);
+        color: rgb(128, 64, 64);
+    }
+
+}
 
 //  @include max($lg) {
 //         padding-top: 53px;
-//     }
+//  }
 
 
 //   @include lineClamp;
-        // -webkit-line-clamp: 2;
+// -webkit-line-clamp: 2;
