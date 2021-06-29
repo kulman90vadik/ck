@@ -12,7 +12,6 @@
     }
     &__inner {
         display: flex;
-        // justify-content: space-between;
         column-gap: 1.5%;
     }
     &__column {
@@ -150,5 +149,265 @@
     &__text {
         @include lineClamp;
         -webkit-line-clamp: 2;
+    }
+}
+
+.services-works {
+    background-color: #141414;
+    padding: 70px 0 80px;
+    &__subtitle {
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-weight: $fw700;
+        font-size: 20px;
+        margin-bottom: 25px;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 2;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+    }
+    &__item {
+        max-width: 467px;
+        width: 100%;
+        height: 468px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        &--big {
+            max-width: 49.5%;
+            height: 462px;
+        }
+        &:hover .services-works__images{
+            transform: scale(1.1);
+        }
+    }
+    &__link {
+        position: relative;
+        display: block;
+        width: 100%;
+        outline: transparent;
+    }
+    &__images {
+        transition: transform 0.3s ease;
+    }
+    &__description {
+        max-width: 400px;
+        width: 100%;
+        font-weight: $fw700;
+        font-size: 20px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+
+    &__range-slider {
+        background-color: #232323;
+        padding: 80px 80px 30px;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    &__heading {
+        font-size: 26px;
+        max-width: 245px;
+        width: 100%;
+        font-weight: $fw700;
+        display: block;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__time {
+        max-width: 120px;
+        width: 100%;
+    }
+    &__number {
+        display: block;
+        font-size: 44px;
+        font-weight: $fw700;
+        color: $gold;
+        line-height: 1;
+    }
+    &__day {
+        display: block;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__timing {
+        display: block;
+        text-align: center;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+
+    & .irs--flat {
+        height: 60px;
+        max-width: 710px;
+        width: 100%;
+        .irs-line {
+            top: 25px;
+            height: 4px;
+            background-color: #606060;
+            border-radius: 0;
+        }
+        .irs-bar {
+            top: 25px;
+            height: 4px;
+            background-color: $gold;
+        }
+        .irs-handle {
+            top: 17px;
+            width: 19px;
+            height: 19px;
+            background-color: $gold;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .irs-handle>i:first-child {
+            display: none;
+        }
+        .irs-single {
+            color: #000;
+            font-size: 16px;
+            line-height: 1;
+            text-shadow: none;
+            padding: 5px 10px;
+            background-color: $gold;
+            border-radius: 0;
+            top: -18px;
+            &::before {
+                bottom: -10px;
+                margin-left: -5px;
+                border: 5px solid transparent;
+                border-top-color: $gold;
+            }
+        }
+        .irs-min {
+            left: -16px;
+            &::before {
+                background-color: $gold;
+            }
+        }
+        .irs-max {
+            right: -20px;
+            &::before {
+                background-color: #606060;
+            }
+        }
+        .irs-min,
+        .irs-max {
+            top: 45px;
+            padding: 0;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1;
+            text-shadow: none;
+            background-color: transparent;
+            border-radius: 0;
+            position: absolute;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 6px;
+                width: 1px;
+                top: -10px;
+            }
+        }
+    }
+}
+
+.services-principles {
+    padding: 150px 0 120px;
+    &__holder{
+        text-align: center;
+    }
+    &__subtitle {
+        margin-bottom: 50px;
+    }
+    &__list {
+        margin-bottom: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        position: relative;
+        display: block;
+        max-width: 33%;
+        width: 100%;
+        padding-top: 170px;
+        text-align: center;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+        }
+        &::before {
+            left: 50%;
+            transform: translateX(-50%);
+            color: #141414;
+            line-height: 1;
+            font-size: 173px;
+            font-weight: $fw700;
+            top: 0;
+        }
+        &::after {
+            @include bg;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &--legislation {
+            &::before {
+                content: '01';
+            }
+            &::after {
+                width: 84px;
+                height: 70px;
+                background-image: url(../images/legislation.svg);
+            }
+        }
+        &--documentation {
+            &::before {
+                content: '02';
+            }
+            &::after {
+                width: 78px;
+                height: 78px;
+                background-image: url(../images/documentation.svg);
+            }
+        }
+        &--order {
+            &::before {
+                content: '03';
+            }
+            &::after {
+                width: 64px;
+                height: 78px;
+                background-image: url(../images/order.svg);
+            }
+        }
+    }
+    &__text {
+        margin-bottom: 50px;
+        font-size: 22px;
+        font-weight: $fw700;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 1;
+        }
     }
 }

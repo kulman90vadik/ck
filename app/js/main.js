@@ -16,4 +16,16 @@ $(function(){
         nextArrow: '<button type="button" class="slick-next"><svg class="principles-slider__icon"><use xlink:href="images/sprite.svg#chevron-right"></use></svg></button>'
     });
 
+    $('.services-works__range').ionRangeSlider({
+        step: 50,
+        postfix: "м.",
+        onStart: function (data) {
+            $('.services-works__number').text(data.from / 10);
+        },
+        onChange: function (data) {
+            $('.services-works__number').text(data.from / 10);
+        }
+    });
+
+
 });
