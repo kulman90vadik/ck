@@ -5,49 +5,45 @@
                 <span class="header__btn-item"></span>
                 <span class="header__btn-item"></span>
                 <span class="header__btn-item"></span>
-
             </button>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Главная</a>
+                        <a class="menu__link" href="#body">Главная</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Проекты</a>
+                        <a class="menu__link" href="#projects">Проекты</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Услуги</a>
+                        <a class="menu__link" href="#services">Услуги</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Вакансии</a>
+                        <a class="menu__link" href="#vacancies">Вакансии</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Контакты</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Политика конфиденциальности</a>
+                        <a class="menu__link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </nav>
             
-            <a class="logo header__logo" href="#">
-                <img class="logo__images" src="images/logo.png" alt="logo">
+            <a class="logo header__logo" href="#body">
+                <picture>
+                    <source srcset="images/logo-small.png" media="(max-width: 540px)">
+                    <img src="images/logo.png" alt="Логотип">
+                </picture>
             </a>
             <a class="header__link" href="tel:+78124016495">
                 <mark class="header__link--gold">+7 (812)</mark>
                 401-64-95
             </a>
-            <a class="header__callback" href="#">
-                <svg class="header__phone">
+            <a class="header__callback" data-fancybox href="#form">
+                <svg class="header__phone" aria-label="значок телефона, нажав на который вы можете заказать обратный звонок">
                     <use xlink:href="images/sprite.svg#tel"></use>
                 </svg>
-                <span class="visually-hidden">
-                    значок телефона, нажав на который вы можете заказать обратный звонок
+                <span class="header__callback-text">
+                    Обратный звонок
                 </span>
-                Обратный звонок
             </a>
-
-
         </div>
     </div>
 </header>

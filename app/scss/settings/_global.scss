@@ -44,6 +44,12 @@ body {
     font-size: 50px;
     font-weight: $fw700;
     line-height: 1.1;
+    @include max($xl) {
+        font-size: 40px;
+    }
+    @include max($mdd) {
+        font-size: 30px;
+    }
 }
 
 .subtitle {
