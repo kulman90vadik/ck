@@ -1,37 +1,35 @@
 .principles {
     background-color: $lite-black;
     padding: 170px 0 60px;
-    margin-bottom: 80px;
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include max($lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &__content {
         max-width: 600px;
         width: 100%;
+        @include max($lg) {
+            margin-bottom: 35px;
+        }
     }
     &__title {
         margin-bottom: 80px;
+        @include max($lg) {
+            margin-bottom: 15px;
+        }
     }
     &__list {
         margin-bottom: 40px;
-    }
-    &__item {
-        position: relative;
-        padding-left: 100px;
-        &:not(:last-child) {
-            margin-bottom: 60px;
-        }
-        &::after {
-            position: absolute;
-            content: '';
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            @include bg;
+        @include max($lg) {
+            margin-bottom: 15px;
         }
     }
+    
     &__item--quality {
         &::after {
             width: 53px;
@@ -53,6 +51,39 @@
             background-image: url(../images/reliability.svg);
         }
     }
+    &__item {
+        position: relative;
+        padding-left: 100px;
+        &:not(:last-child) {
+            margin-bottom: 60px;
+            @include max($lg) {
+                margin-bottom: 7px;
+            }
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            @include bg;
+            @include max($md) {     
+                width: 58px;
+                height: 50px;
+                background-size: contain;
+            }
+            @include max($sm) {     
+                width: 48px;
+                height: 40px;
+            }
+        }
+        @include max($mdd) {
+            padding-left: 80px;
+        }
+        @include max($sm) {
+            padding-left: 60px;
+        }
+    }
     &__subtitle {
         font-size: 23px;
         margin-bottom: 15px;
@@ -61,13 +92,27 @@
         line-height: 1;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($lg) {
+            margin-bottom: 5px;
+        }
+        @include max($md) {
+            font-size: 20px;
+        }
     }
     &__row {
         margin-bottom: 4px;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($mdd) {
+            margin-bottom: 0;
+        }
     }
-
+    @include max($xl) {
+        padding: 50px 0;
+    }
+    @include max($mdd) {
+        padding: 23px 0;
+    }
 }
 
 
@@ -78,13 +123,25 @@
         @include bg;
         display: block;
         height:  795px;
+        @include max($xl) {
+            height: 600px;
+        }
+        @include max($lg) {
+            height: 450px;
+        }
+        @include max($mdd) {
+            height: 380px;
+        }
+        @include max($min) {
+            height: 330px;
+        }
     }
     & .slick-dots {
         position: absolute;
         width: 285px;
         padding: 20px 0 20px 40px;
         display: flex;
-        right: -35px;
+        right: 0;
         bottom: 125px;
         z-index: 9;
         background-color: #202020;
@@ -118,6 +175,15 @@
                 background-color: $gold;
             }
         }
+        @include max($xl) {
+            padding: 20px 0 20px 20px;
+            bottom: 35px;
+            max-width: 215px;
+        }
+        @include max($md) {
+            padding: 15px 10px;
+            bottom: 0;
+        }
     }
     & .slick-arrow {
         padding: 0;
@@ -148,6 +214,12 @@
                 fill: $gold;
             }
         }
+        @include max($xl) {
+            bottom: 49px;
+        }
+        @include max($md) {
+            bottom: 10px;
+        }
     }
     &__icon {
         width: 13px;
@@ -156,9 +228,28 @@
         margin: auto;
     }
     & .slick-prev {
-        right: 50px;
+        right: 70px;
+        @include max($md) {
+            right: 60px;
+        }
     }
     & .slick-next {
-        right: 0;
+        right: 20px;
+        @include max($md) {
+            right: 10px;
+        }
+    }
+    @include max($xl) {
+        max-width: 500px;
+    }
+    @include max($lg) {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    @include max($mdd) {
+        max-width: 320px;
+    }
+    @include max($min) {
+        max-width: 280px;
     }
 }

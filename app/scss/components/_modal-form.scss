@@ -1,0 +1,48 @@
+.modal-form {
+    display: none;
+    max-width: 620px;
+    width: 100%;
+    padding: 80px;
+    &__title {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: $fw700;
+        @include max($sm) {
+            font-size: 18px;
+        }
+    }
+    &__input {
+        margin-bottom: 20px;
+        background-color: #212121;
+        @include max($s) {
+            height: 50px;
+            margin-bottom: 15px;
+        }
+    }
+    &__btn {
+        max-width: 100%;
+        margin-bottom: 30px;
+        @include max($s) {
+            height: 50px;
+            margin-bottom: 15px;
+        }
+    }
+    &__box--checkbox {
+        @include max($sm) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__label-checkbox {
+        @include max($sm) {
+            margin-bottom: 5px;
+        }
+    }
+    @include max($lg) {
+        padding: 40px;
+    }
+    @include max($sm) {
+        padding: 10px;
+    }
+}

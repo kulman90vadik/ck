@@ -1,0 +1,113 @@
+.vacancies {
+    padding-top: 80px;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-top: 50px;
+        }
+    }
+    &__content {
+        max-width: 725px;
+        width: 100%;
+    }
+    &__subtitle {
+        font-size: 22px;
+        font-weight: $fw700;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        margin-bottom: 20px;
+    }
+    &__function {
+        font-size: 18px;
+        font-weight: $fw500;
+        margin-bottom: 5px;
+        display: block;
+    }
+    &__list {
+        margin-bottom: 30px;
+    }
+    &__list--hidden {
+        margin-bottom: 50px;
+        display: none;
+        padding-left: 20px;
+    }
+    &__item {
+        font-size: 16px;
+        position: relative;
+        padding-left: 16px;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $gold;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: transparent;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        &:hover .vacancies__text{
+            color: #fff;
+            border-color: #fff;
+        }
+        &:hover .vacancies__icon{
+            fill: #fff;
+        }
+        &:focus .vacancies__text{
+            border-color: rgb(233, 223, 223);
+            color: rgb(233, 223, 223);
+        }
+        &:focus .vacancies__icon{
+            fill: rgb(233, 223, 223);
+        }
+        &:active .vacancies__text{
+            border-color: rgb(128, 64, 64);
+            color: rgb(128, 64, 64);
+        }
+        &:active .vacancies__icon{
+            fill: rgb(128, 64, 64);
+        }
+    }
+    &__text {
+        padding: 0 0 3px;
+        color: $gold;
+        margin-right: 10px;
+        border-bottom: 1px dashed $gold;
+        transition: color 0.3s ease-in, border-color 0.3s ease-in;
+    }
+    &__icon {
+        width: 16px;
+        height: 9px;
+        fill: $gold;
+        transition: transform 0.3s ease-in, fill 0.3s ease-in;
+        &--rotate {
+            transform: rotate(180deg);
+        }
+    }
+    &__photo {
+        max-width: 498px;
+        height: 671px;
+        display: flex;
+        @include bg;
+    }
+    &__images {
+        margin-top: auto;
+    }
+}

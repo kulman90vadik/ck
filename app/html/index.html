@@ -8,18 +8,33 @@
     <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body id="body">
     @include('./components/header.html')
     <main class="main">
         @include('./components/home-page.html')
         @include('./components/principles.html')
         @include('./components/projects.html')
-        @include('./components/services.html')
-        @include('./components/vacancies.html')
+        <!-- @include('./components/services.html') -->
+        <!-- @include('./components/vacancies.html') -->
+        <!-- @include('./components/contacts.html') -->
     </main>
 
 
     @include('./components/modals.html')
+    @include('./components/modal-form.html')
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+    <script>
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 59.963916165730254, lng: 30.383561398685146 },
+                zoom: 16,
+            });
+        }
+    </script>
+
     <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -10,18 +10,39 @@
         height: 100vh;
     }
     &__inner {
-        max-width: 800px;
+        max-width: 755px;
         width: 100%;
+        @include max($lg) {
+            margin: auto 0 10px 0;
+        }
+        @include max($lgg) {
+            margin: auto;
+        }
+        @include max($smm) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+        @include max($sm) {
+            justify-content: center;
+        }
     }
     &__logo-bg {
         width: 394px;
         height: 518px;
         @include bg;
+        @include max($xl) {
+            display: none;
+        }
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 40px;
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
     }
     &__item {
         position: relative;
@@ -74,6 +95,38 @@
             transform: translateY(-50%);
             content: '';
             @include bg;
+            @include max($lg) {
+                width: 50px;
+                height: 50px;
+                background-size: contain;
+            }
+            @include max($smm) {
+                width: 30px;
+                height: 30px;
+                top: 17px;
+            }
+        }
+        @include max($lg) {
+            margin: 0 10px 5px 0;
+            padding-left: 60px;
+        }
+        @include max($lgg) {
+            max-width: 245px;
+            margin: 0 20px 45px 0;
+        }
+        @include max($mdd) {
+            margin: 0 10px 0 0;
+            max-width: 190px;
+        }
+        @include max($smm) {
+            padding-left: 40px;
+            max-width: 168px;
+        }
+        @include max($sm) {
+            margin-bottom: 15px;
+        }
+        @include max($min) {
+            margin-bottom: 3px;
         }
     }
     &__subtitle {
@@ -81,10 +134,43 @@
         line-height: 1.1;
         font-weight: $fw700;
         margin-bottom: 23px;
+        @include max($lg) {
+            margin-bottom: 0;
+        }
+        @include max($lgg) {
+            margin-bottom: 30px;
+        }
+        @include max($mdd) {
+            margin-bottom: 0;
+        }
+        @include max($smm) {
+            font-size: 18px;
+        }
+        @include max($sm) {
+            margin-bottom: 15px;
+        }
+        @include max($min) {
+            margin-bottom: 5px;
+        }
     }
     &__row {
         &:not(:last-child) {
             margin-bottom: 10px;
+            @include max($lg) {
+                margin-bottom: 0;
+            }
+            @include max($lgg) {
+                margin-bottom: 20px;
+            }
+            @include max($mdd) {
+                margin-bottom: 0;
+            }
+            @include max($sm) {
+                margin-bottom: 8px;
+            }
+            @include max($min) {
+                margin-bottom: 6px;
+            }
         }
         font-size: 19px;
         position: relative;
@@ -93,6 +179,9 @@
             position: absolute;
             content: '-';
             left: 0;
+        }
+        @include max($lg) {
+            font-size: 16px;
         }
     }
     & .slick-dots {
@@ -104,6 +193,10 @@
         li {
             &:not(:last-child) {
                 margin-bottom: 20px;
+                @include max($lg) {
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
             }
             button {
                 cursor: pointer;
@@ -129,5 +222,11 @@
                 background-color: $gold;
             }
         }
-    }
+        @include max($lg) {
+            display: flex;
+            top: auto;
+            right: 20px;
+            bottom: 10px;
+        }
+    } 
 }

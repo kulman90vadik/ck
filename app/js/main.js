@@ -27,5 +27,31 @@ $(function(){
         }
     });
 
+    $('.vacancies__btn').on('click', function(){
+        $(this).next('.vacancies__list--hidden').slideToggle();
+        $(this).children('.vacancies__icon').toggleClass('vacancies__icon--rotate');
+    });
+
+
+
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 30) {
+            $('.header').addClass('header--bg');
+        } else {
+            $('.header').removeClass('header--bg');
+        }
+    });
+
+
+    $('.menu__link, .logo').on('click', function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href');
+        var top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+
+        // !
+        $('.menu').removeClass('menu--active');
+        $('.header__btn-item').removeClass('header__btn-item--active');
+});
 
 });
