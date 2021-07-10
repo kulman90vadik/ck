@@ -57,6 +57,12 @@ body {
     font-size: 35px;
     font-weight: $fw500;
     line-height: 1.2;
+    @include max($lg) {
+        font-size: 25px;
+    }
+    @include max($md) {
+        font-size: 20px;
+    }
 }
 
 
