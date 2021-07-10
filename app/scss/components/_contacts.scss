@@ -2,15 +2,29 @@
     position: relative;
     padding: 80px 0;
     background-color: #232323;
+    &__inner {
+        @include max($xl) {
+            margin-bottom: 15px;
+        }
+    }
     &__title {
         margin-bottom: 75px;
+        @include max($xl) {
+            margin-bottom: 10px;
+        }
     }
     &__list {
         margin-bottom: 80px;
+        @include max($xl) {
+            margin-bottom: 20px;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-bottom: 25px;
+            @include max($lg) {
+                margin-bottom: 10px;
+            }
         }
     }
     &__link {
@@ -36,6 +50,9 @@
                 height: 13px;
                 background-image: url(../images/icons/tel-gold.svg);
             }
+            @include max($md) {
+                font-size: 21px;
+            }
         }
         &--email {
             &::after {
@@ -48,7 +65,7 @@
             max-width: 510px;
             width: 100%;
             @include lineClamp;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
             &::after {
                 width: 10px;
                 height: 14px;
@@ -64,11 +81,17 @@
         &:active {
             color: rgb(128, 64, 64);
         }
+        @include max($md) {
+            font-size: 16px;
+        }
     }
     &__subtitle {
         font-size: 30px;
         margin-bottom: 10px;
         font-weight: $fw500;
+        @include max($lg) {
+            font-size: 24px;
+        }
     }
     &__text {
         margin-bottom: 45px;
@@ -76,14 +99,35 @@
             @include lineClamp;
             -webkit-line-clamp: 2;
         }
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
     }
     & #map {
         position: absolute;
-        max-width: 820px;
+        max-width: 38vw;
         width: 100%;
         right: 0;
         bottom: 0;
         top: 0;
+        @include max($xl) {
+            position: static;
+            max-width: 100%;
+            height: 400px;
+        }
+        @include max($lg) {
+            height: 310px;
+        }
+        @include max($md) {
+            height: 270px;
+        }
+    }
+    @include max($xl) {
+        position: static;
+        padding: 68px 0 0;
+    }
+    @include max($md) {
+        padding-top: 53px;
     }
 }
 

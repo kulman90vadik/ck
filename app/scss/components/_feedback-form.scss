@@ -14,6 +14,15 @@
             width: 100%;
             display: flex;
             align-items: center;
+            @include max($sm) {
+                flex-direction: column;
+            }
+        }
+        @include max($lg) {
+            margin-bottom: 15px;
+        }
+        @include max($lgg) {
+            max-width: 100%;
         }
     }
     &__label {
@@ -37,6 +46,12 @@
             &:hover {
                 background-color: rgb(155, 151, 151);
             }
+            @include max($lgg) {
+                height: 50px;
+            }
+        }
+        @include max($lgg) {
+            margin-bottom: 5px;
         }
     }
     &__input {
@@ -61,6 +76,9 @@
         &:focus {
             background-color: rgb(155, 151, 151);
         }
+        @include max($lgg) {
+            height: 50px;
+        }
     }
     &__btn {
         padding: 0;
@@ -69,6 +87,11 @@
         height: 60px;
         background-color: transparent;
         cursor: pointer;
+        @include max($lgg) {
+            max-width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+        }
     }
     &__label-checkbox {
         font-size: 16px;
@@ -96,6 +119,9 @@
         }
         &:active .feedback-form__checked{
             background-color: rgb(128, 64, 64);
+        }
+        @include max($sm) {
+            margin-bottom: 8px;
         }
     }
     &__checkbox {

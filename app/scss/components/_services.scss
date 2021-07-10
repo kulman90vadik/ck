@@ -9,10 +9,17 @@
     background-color: #232323;
     &__subtitle {
         margin-bottom: 90px;
+        @include max($xl) {
+            margin-bottom: 20px;
+        }
     }
     &__inner {
         display: flex;
         column-gap: 1.5%;
+        @include max($lgg) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__column {
         max-width: 467px;
@@ -21,6 +28,49 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include max($xl) {
+            height: 630px;
+        }
+        @include max($lg) {
+            height: 460px;
+        }
+        @include max($lgg) {
+            max-width: 43%;
+            margin-bottom: 10px;
+        }
+        @include max($lg) {
+            max-width: 87.5%;
+            margin-bottom: 10px;
+        }
+        @include max($smm) {
+            height: 360px;
+        }
+        @include max($s) {
+            max-width: 100%;
+        }
+        &--last {
+            @include max($lgg) {
+                max-width: 87.5%;
+                height: 625px;
+            }
+            @include max($smm) {
+                height: 560px;
+            }
+            @include max($s) {
+                max-width: 100%;
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+            @include max($lgg) {
+                .services-cars__info {
+                    right: 5px;
+                    top: 5px;
+                    left: auto;
+                }
+            }
+        }
+        
     }
     &__item {
         position: relative;
@@ -61,25 +111,41 @@
         position: absolute;
         left: 40px;
         top: 40px;
+        @include max($xl) {
+            left: 10px;
+            top: 10px;
+        }
+        @include max($lg) {
+            left: 5px;
+            top: 5px;
+        }
     }
     &__name {
         display: block;
         font-weight: $fw700;
         font-size: 20px;
+        @include max($xl) {
+            font-size: 17px;
+        }
     }
     &__name,
     &__model {
         @include lineClamp;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
+    }
+    @include max($lgg) {
+        padding: 55px 0 30px;
     }
 }
-
 
 .services-duties {
     padding: 70px 0 30px;
     background-color: #141414;
     &__subtitle {
         margin-bottom: 90px;
+        @include max($xl) {
+            margin-bottom: 25px;
+        }
     }
     &__list {
         display: flex;
@@ -145,10 +211,28 @@
                 background-image: url(../images/icons/mounting.svg);
             }
         }
+        @include max($lg) {
+            padding-left: 90px;
+            margin-bottom: 45px;
+            max-width: 32%;
+        }
+        @include max($lgg) {
+            max-width: 49%;
+            margin-bottom: 60px;
+        }
+        @include max($sm) {
+            max-width: 100%;
+        }
     }
     &__text {
         @include lineClamp;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
+    }
+    @include max($xl) {
+        padding: 25px 0;
+    }
+    @include max($lgg) {
+        padding: 25px 0 0 0;
     }
 }
 
@@ -166,22 +250,67 @@
             @include lineClamp;
             -webkit-line-clamp: 2;
         }
+        @include max($xl) {
+            font-size: 16px;
+        }
+        @include max($lg) {
+            p {
+                -webkit-line-clamp: 4;
+            }
+        }
     }
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-bottom: 70px;
+        margin-right: -15px;
+        @include max($xl) {
+            justify-content: center;
+        }
+        @include max($lg) {
+            margin-bottom: 20px;
+        }
+        @include max($sm) {
+            margin-right: 0;
+        }
     }
     &__item {
-        max-width: 467px;
+        max-width: 32%;
         width: 100%;
-        height: 468px;
+        max-height: 468px;
         overflow: hidden;
-        margin-bottom: 15px;
+        margin: 0 15px 15px 0;
+        @include max($xl) {
+            max-width: 28%;
+        }
+        @include max($lg) {
+            max-width: 31%;
+        }
+        @include max($mdd) {
+            max-width: 47%;
+        }
+        @include max($sm) {
+            max-width: 93%;
+            margin-right: 0;
+            max-height: 275px;
+        }
         &--big {
-            max-width: 49.5%;
-            height: 462px;
+            max-width: 48.5%;
+            max-height: 462px;
+            @include max($xl) {
+                max-width: 42.6%;
+            }
+            @include max($lg) {
+                max-width: 47.5%;
+            }
+            @include max($mdd) {
+                max-width: 94.5%;
+                max-height: 220px;
+            }
+            @include max($sm) {
+                max-width: 92.5%;
+            }
         }
         &:hover .services-works__images{
             transform: scale(1.1);
@@ -191,6 +320,7 @@
         position: relative;
         display: block;
         width: 100%;
+        height: 100%;
         outline: transparent;
     }
     &__images {
@@ -207,18 +337,31 @@
         left: 50%;
         transform: translate(-50%, -50%);
         @include lineClamp;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
+        @include max($lg) {
+            font-size: 16px;
+        }
     }
 
     &__range-slider {
         background-color: #232323;
-        padding: 80px 80px 30px;
+        padding: 80px 10px 30px;
+        @include max($xl) {
+            padding: 30px 10px 30px;
+        }
     }
     &__form {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 25px;
+        @include max($xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include max($md) {
+            margin-bottom: 9px;
+        }
     }
     &__heading {
         font-size: 26px;
@@ -228,10 +371,25 @@
         display: block;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($xl) {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        @include max($sm) {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
     }
     &__time {
         max-width: 120px;
         width: 100%;
+        @include max($xl) {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__number {
         display: block;
@@ -239,6 +397,12 @@
         font-weight: $fw700;
         color: $gold;
         line-height: 1;
+        @include max($xl) {
+            margin-right: 10px;
+        }
+        @include max($sm) {
+            font-size: 34px;
+        }
     }
     &__day {
         display: block;
@@ -256,6 +420,9 @@
         height: 60px;
         max-width: 710px;
         width: 100%;
+        @include max($xl) {
+            max-width: 90%;
+        }
         .irs-line {
             top: 25px;
             height: 4px;
@@ -328,6 +495,9 @@
             }
         }
     }
+    @include max($xl) {
+        padding: 25px 0;
+    }
 }
 
 .services-principles {
@@ -337,11 +507,21 @@
     }
     &__subtitle {
         margin-bottom: 50px;
+        @include max($lg) {
+            margin-bottom: 25px;
+        }
     }
     &__list {
         margin-bottom: 70px;
         display: flex;
         justify-content: space-between;
+        @include max($lg) {
+            margin-bottom: 25px;
+        }
+        @include max($md) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__item {
         position: relative;
@@ -363,6 +543,9 @@
             font-size: 173px;
             font-weight: $fw700;
             top: 0;
+            @include max($lg) {
+                font-size: 120px;
+            }
         }
         &::after {
             @include bg;
@@ -400,6 +583,9 @@
                 background-image: url(../images/order.svg);
             }
         }
+        @include max($md) {
+            max-width: 100%;
+        }
     }
     &__text {
         margin-bottom: 50px;
@@ -408,6 +594,19 @@
         p {
             @include lineClamp;
             -webkit-line-clamp: 1;
+            @include max($md) {
+                -webkit-line-clamp: 3;
+            }
         }
+        @include max($lg) {
+            margin-bottom: 20px;
+        }
+        @include max($lgg) {
+            margin-bottom: 10px;
+            font-size: 19px;
+        }
+    }
+    @include max($xl) {
+        padding: 50px 0;
     }
 }

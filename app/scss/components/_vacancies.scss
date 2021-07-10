@@ -3,22 +3,40 @@
     &__wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         &:nth-child(odd) {
             flex-direction: row-reverse;
-            justify-content: space-between;
             padding-top: 50px;
+            @include max($lgg) {
+                flex-direction: column;
+                padding-top: 25px;
+            }
+        }
+        @include max($lgg) {
+            flex-direction: column;
         }
     }
     &__content {
-        max-width: 725px;
+        max-width: 630px;
         width: 100%;
+        @include max($lg) {
+            max-width: 415px;
+        }
+        @include max($lgg) {
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
     }
     &__subtitle {
         font-size: 22px;
         font-weight: $fw700;
         @include lineClamp;
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
         margin-bottom: 20px;
+        @include max($lgg) {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
     }
     &__function {
         font-size: 18px;
@@ -28,11 +46,17 @@
     }
     &__list {
         margin-bottom: 30px;
+        @include max($xl) {
+            margin-bottom: 15px;
+        }
     }
     &__list--hidden {
         margin-bottom: 50px;
         display: none;
         padding-left: 20px;
+        @include max($xl) {
+            margin-bottom: 15px;
+        }
     }
     &__item {
         font-size: 16px;
@@ -42,6 +66,12 @@
         -webkit-line-clamp: 2;
         &:not(:last-child) {
             margin-bottom: 5px;
+            @include max($xl) {
+                margin-bottom: 2px;
+            }
+            @include max($lgg) {
+                margin-bottom: 0;
+            }
         }
         &::after {
             position: absolute;
@@ -51,8 +81,10 @@
             border-radius: 50%;
             background-color: $gold;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 7px;
+        }
+        @include max($lgg) {
+            -webkit-line-clamp: 4;
         }
     }
     &__btn {
@@ -84,6 +116,9 @@
         &:active .vacancies__icon{
             fill: rgb(128, 64, 64);
         }
+        @include max($xl) {
+            margin-bottom: 15px;
+        }
     }
     &__text {
         padding: 0 0 3px;
@@ -106,8 +141,18 @@
         height: 671px;
         display: flex;
         @include bg;
+        @include max($xl) {
+            max-width: 280px;
+            height: 410px;
+        }
     }
     &__images {
         margin-top: auto;
+    }
+    @include max($xl) {
+        padding-top: 68px;
+    }
+    @include max($sm) {
+        padding-top: 55px;
     }
 }
