@@ -52,6 +52,8 @@ $(function(){
         // !
         $('.menu').removeClass('menu--active');
         $('.header__btn-item').removeClass('header__btn-item--active');
-});
+    });
+
+    new WOW().init();
 
 });
