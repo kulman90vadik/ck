@@ -1,0 +1,49 @@
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="header__btn" type="button" aria-label="Выпадающее меню">
+                <span class="header__btn-item"></span>
+                <span class="header__btn-item"></span>
+                <span class="header__btn-item"></span>
+            </button>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#body">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#projects">Проекты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#services">Услуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#vacancies">Вакансии</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a class="logo header__logo" href="#body">
+                <picture>
+                    <source srcset="images/logo-small.png" media="(max-width: 540px)">
+                    <img src="images/logo.png" alt="Логотип">
+                </picture>
+            </a>
+            <a class="header__link" href="tel:+78124016495">
+                <mark class="header__link--gold">+7 (812)</mark>
+                401-64-95
+            </a>
+            <a class="header__callback wow animate__fadeInRight" data-wow-duration="2s" data-wow-delay="1.5s" data-fancybox href="#form">
+                <svg class="header__phone" aria-label="значок телефона, нажав на который вы можете заказать обратный звонок">
+                    <use xlink:href="images/sprite.svg#tel"></use>
+                </svg>
+                <span class="header__callback-text">
+                    Обратный звонок
+                </span>
+            </a>
+        </div>
+    </div>
+</header>
