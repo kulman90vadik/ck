@@ -1,8 +1,11 @@
-$(function(){
+// $(function(){
+document.addEventListener('DOMContentLoaded', () =>{
 
-    $('.header__btn').on('click', function(){
-        $('.menu').toggleClass('menu--active');
-        $('.header__btn-item').toggleClass('header__btn-item--active');
+    document.querySelector('.header__btn').addEventListener('click', function(){
+        document.querySelector('.menu').classList.toggle('menu--active');
+        document.querySelectorAll('.header__btn-item').forEach(elem => {
+            elem.classList.toggle('header__btn-item--active');
+        });
     });
 
     $('.home-page__slider').slick({
@@ -27,19 +30,23 @@ $(function(){
         }
     });
 
-    $('.vacancies__btn').on('click', function(){
-        $(this).next('.vacancies__list--hidden').slideToggle();
-        $(this).children('.vacancies__icon').toggleClass('vacancies__icon--rotate');
+    new WOW().init();
+
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 30) {
+            document.querySelector('.header').classList.add('header--bg');
+        }
+        else {
+            document.querySelector('.header').classList.remove('header--bg');
+        }
     });
 
 
-
-    $(window).scroll(function(){
-        if($(document).scrollTop() > 30) {
-            $('.header').addClass('header--bg');
-        } else {
-            $('.header').removeClass('header--bg');
-        }
+    document.querySelectorAll('.vacancies__btn').forEach(elem => {
+        elem.addEventListener('click', function(){
+            elem.nextElementSibling.classList.toggle('vacancies__list--hidden');
+            elem.lastElementChild.classList.toggle('vacancies__icon--rotate');
+        });
     });
 
 
@@ -53,7 +60,5 @@ $(function(){
         $('.menu').removeClass('menu--active');
         $('.header__btn-item').removeClass('header__btn-item--active');
     });
-
-    new WOW().init();
 
 });
